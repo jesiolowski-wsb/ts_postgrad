@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +16,1985 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section><h1>TypeScript</h1></section>
+				<section>
+					<section>
+						<h4>whoami:</h4>
+						<div>Filip Jesiołowski</div>
+						<div>(FE lead, ex fullstack, photographer, lecturer)</div>
+						<a href="https://www.linkedin.com/in/jesiolowski/" target="_blank">LinkedIn</a><br><br>
+
+						<div>mailto: <a href="mailto:filip.jesiolowski@gdansk.merito.pl" target="_blank">filip.jesiolowski@gdansk.merito.pl</a></div>
+						<div>mailto: <a href="mailto:filip.jesiolowski@gdansk.merito.pl" target="_blank">filip.jesiolowski@bydgoszcz.merito.pl</a></div>
+						<div>msTeams :)</div>
+					</section>
+					<section>
+						<h4>course structure</h4>
+						<ul>
+							<li>listening</li>
+							<li>doing</li>
+							<li>showing the results</li>
+							<li>Q & A on every slide </li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h4>expectations vs reality</h4>
+						<img width="40%" src="res/expectations-vs-reality.gif" />
+					</section>
+					<section>
+						<h4>agenda</h4>
+						<ul>
+							<li>getting started</li>
+							<li>fundamentals</li>
+							<li>advanced types</li>
+							<li>classes, interfaces and OOP</li>
+							<li>generics</li>
+<!--							<li>decorators</li>-->
+							<li>JS integration</li>
+							<li>[react with TS]</li>
+							<li>wrap-up</li>
+						</ul>
+					</section>
+					<section>
+						<h4>difficulties</h4>
+						<ul>
+							<li>TS is more like vocabulary enhancements...</li>
+							<li>...and learning vocabulary by listening is not the best option</li>
+							<li>if not familiar with JS, course will be tough</li>
+							<li>exercises testing also ES6 skills (on purpose)</li>
+							<li>TS docs (<a target="_blank" href="https://www.typescriptlang.org/">https://www.typescriptlang.org/</a>) not too friendly </li>
+						</ul>
+					</section>
+					<section>
+						<h4>aim</h4>
+						<img width="40%" src="res/just-basic-stuff-basic-stuff.gif" />
+					</section>
+				</section>
+				<section>
+					<section>
+						<h4>getting started</h4>
+					</section>
+					<section>
+						<h4>Prerequisites</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.17.27.png" />
+					</section>
+					<section>
+						<h4>In this section:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.19.29.png" />
+					</section>
+					<section>
+						<h4>Questions to answer:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.22.17.png" />
+					</section>
+					<section>
+						<h4>Answer 1:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.23.07.png" />
+					</section>
+					<section>
+						<h4>Answer 1:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.23.40.png" />
+					</section>
+					<section>
+						<h4>Benefits:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.24.39.png" />
+					</section>
+					<section>
+						<h4>statically vs dynamically typed:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.25.46.png" />
+					</section>
+					<section>
+						<h4>TLDR:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.26.26.png" />
+					</section>
+					<section>
+						<h4>example:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.27.02.png" />
+					</section>
+					<section>
+						<h4>bonus:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.27.49.png" />
+					</section>
+					<section>
+						<h4>drawbacks:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.28.30.png" />
+					</section>
+					<section>
+						<h4>compiler:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.29.34.png" />
+					</section>
+					<section>
+						<h4>drawbacks:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.30.05.png" />
+					</section>
+					<section>
+						<h4>be reasonable:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.30.39.png" />
+					</section>
+
+					<section>
+						<h4>dependancies (nodeJS):</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.32.30.png" />
+					</section>
+					<section>
+						<h4>installing TS:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.33.04.png" />
+					</section>
+					<section>
+						<h4>checking installation:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.33.39.png" />
+					</section>
+					<section>
+						<h4>Hello World:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.45.04.png" />
+					</section>
+					<section>
+						<h4>compile to JS:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.46.08.png" />
+					</section>
+					<section>
+						<h4>results:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.46.37.png" />
+					</section>
+					<section>
+						<h4>what's that highlight?:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.49.42.png" />
+					</section>
+					<section>
+						<h4>error description:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.49.55.png" />
+					</section>
+					<section>
+						<h4>compiling:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.50.12.png" />
+					</section>
+					<section>
+						<h4>var ???</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.50.21.png" />
+					</section>
+
+					<section>
+						<h4>compiler configuration:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.55.57.png" />
+					</section>
+					<section>
+						<h4>old standard as a default:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.57.04.png" />
+					</section>
+					<section>
+						<h4>suggested changes to default config:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.58.23.png" />
+					</section>
+					<section>
+						<h4>suggested changes to default config:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.58.45.png" />
+					</section>
+					<section>
+						<h4>suggested changes to default config:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.59.00.png" />
+					</section>
+					<section>
+						<h4>suggested changes to default config:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.59.32.png" />
+					</section>
+					<section>
+						<h4>simplified run:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2013.59.55.png" />
+					</section>
+					<section>
+						<h4>final structure:</h4>
+						<img src="res/getting_started/Screenshot%202024-02-27%20at%2014.00.03.png" />
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h4>fundamentals</h4>
+					</section>
+					<section>
+						<h4>In this section:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2014.52.40.png" />
+					</section>
+					<section>
+						<h4>Basic types:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2014.53.05.png" />
+					</section>
+					<section>
+						<h4>basic examples:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2014.53.49.png" />
+					</section>
+					<section>
+						<h4>implicit types:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2014.56.34.png" />
+					</section>
+					<section>
+						<h4>ANY:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2014.56.43.png" />
+					</section>
+					<section>
+						<h4>Why it's bad:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2014.57.23.png" />
+					</section>
+					<section>
+						<h4>implicit any in functions:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2014.57.57.png" />
+					</section>
+					<section>
+						<h4>dirty fix:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2014.58.22.png" />
+					</section>
+					<section>
+						<h4>even dirtier fix:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2014.59.06.png" />
+					</section>
+
+					<section>
+						<h4>Arrays:</h4>
+					</section>
+					<section>
+						<h4>lack of type safetey</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2016.50.45.png" />
+					</section>
+					<section>
+						<h4>type[]:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2016.51.03.png" />
+					</section>
+					<section>
+						<h4>implicit type[]:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2016.51.21.png" />
+					</section>
+					<section>
+						<h4>implicit any[]:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2016.51.32.png" />
+					</section>
+					<section>
+						<h4>implicit any[]:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2016.51.46.png" />
+					</section>
+					<section>
+						<h4>type check:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2016.51.56.png" />
+					</section>
+					<section>
+						<h4>only 'number' methods:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2016.52.13.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 1:</h4> <small style="color:red">(@Filip: after the 'functions' PLZ)</small>
+						<div>1. create a function <strong>sumElements</strong> that accepts an array of numbers and returns its sum</div>
+						<pre class="fragment"><code class="javascript" data-trim data-noescape>const sumElements = elements => elements.reduce((acc, current) => acc + current, 0)</code></pre>
+						<div>2. give it appropriate types </div>
+						<pre class="fragment"><code class="javascript" data-trim data-noescape>
+const sumElements = (elements: number[]):number => {
+  return elements.reduce((acc: number, current: number): number => acc + current, 0)
+}
+						</code></pre>
+
+					</section>
+
+
+					<section>
+						<h4>TUPLES</h4>
+					</section>
+					<section>
+						<h4>types on fixed position:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2017.00.31.png" />
+					</section>
+					<section>
+						<h4>number of params matters:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2017.00.44.png" />
+					</section>
+					<section>
+						<h4>type methods only (number):</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2017.01.10.png" />
+					</section>
+					<section>
+						<h4>type methods only (string):</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-27%20at%2017.01.27.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 2:</h4><small style="color:red">(@Filip: after the 'functions' PLZ)</small>
+						<small>create a function <strong>calculateProductValue</strong> accepting 3 arguments: name (string), unit price (number) and quantity (number). Return a string with value=price*quantity decorated with product name like:<br>Apple: 25 PLN</small>
+						<pre class="fragment"><code class="javascript" data-trim data-noescape>
+							const calculateProductValue = (name, price, quantity) => `${name}: ${price * quantity} zł`
+						</code></pre>
+
+						<small>type it throwing in a tuple type as an input destructuring input object within the function</small>
+						<pre class="fragment"><code class="javascript" data-trim data-noescape>
+function calculateProductValue(product: [string, number, number]):string {
+    const [name, price, quantity] = product;
+    const value = price * quantity;
+    return `${name}: ${value} zł`;
+}
+
+calculateProductValue(["apple", 2.5, 10])
+						</code></pre>
+					</section>
+
+					<section>
+						<h4>Enums</h4>
+					</section>
+					<section>
+						<h4>a way to group of constants:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.06.56.png" />
+					</section>
+					<section>
+						<h4>grouped constants:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.08.11.png" />
+					</section>
+					<section>
+						<h4>...with numeric values:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.08.22.png" />
+					</section>
+					<section>
+						<h4>that can be overwritten:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.08.49.png" />
+					</section>
+					<section>
+						<h4>...also by starting value:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.09.03.png" />
+					</section>
+					<section>
+						<h4>setting the value:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.09.14.png" />
+					</section>
+					<section>
+						<h4>...and calling it:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.09.30.png" />
+					</section>
+					<section>
+						<h4>call output:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.09.50.png" />
+					</section>
+					<section>
+						<h4>enum transpiled to JS:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.10.07.png" />
+					</section>
+					<section>
+						<h4>but there's a hack :D:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.10.19.png" />
+					</section>
+					<section>
+						<h4>enum transpiled to JS:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.10.40.png" />
+					</section>
+					<section>
+						<h4>legit hack:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.10.59.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 3:</h4><small style="color:red">(@Filip: after the 'functions' PLZ)</small>
+						<small>create a function <strong>calculateDiscountPrice</strong> that takes three arguments: the price of the product (number), the category of the product (string), and the quantity of the product (number). The function should return the total price after applying a category-specific discount like:<br>
+						Electronics: 0.1, Books: 0.15, Clothing: 0.05
+						<pre class="fragment"><code class="javascript" data-trim data-noescape>
+function calculateDiscountPrice(price, category, quantity) {
+    let discount;
+    switch (category) {
+        case 'Electronics':
+            discount = 0.10; // 10% discount
+            break;
+        case 'Books':
+            discount = 0.15; // 15% discount
+            break;
+        case 'Clothing':
+            discount = 0.05; // 5% discount
+            break;
+        default:
+            discount = 0;
+            break;
+    }
+    const totalPrice = price * quantity * (1 - discount);
+    return totalPrice;
+}						</code></pre></small>
+					</section>
+					<section data-background-color="#caf9e6">
+				<small>Convert the calculateDiscountPrice function into TypeScript, using an enum to represent the product categories.<br>
+					<ul>
+						<li>Define an enum Category with members for each category (Electronics, Books, Clothing).</li>
+						<li>Modify the function to accept the enum as the type for the category parameter</li>
+					</ul>
+						<pre class="fragment"><code class="javascript" data-trim data-noescape>
+enum Category {
+    Electronics,
+    Books,
+    Clothing
+}
+
+function calculateDiscountPrice(price: number, category: Category, quantity: number): number {
+    let discount: number;
+    switch (category) {
+        case Category.Electronics:
+            discount = 0.10;
+            break;
+        case Category.Books:
+            discount = 0.15;
+            break;
+        case Category.Clothing:
+            discount = 0.05;
+            break;
+        default:
+            discount = 0;
+            break;
+    }
+    const totalPrice = price * quantity * (1 - discount);
+    return totalPrice;
+}
+
+console.log(calculateDiscountPrice(100, Category.Books, 2)); // Uses the enum
+						</code></pre></small>
+					</section>
+
+					<section>
+						<h4>Functions</h4>
+					</section>
+					<section>
+						<h4>implicit no return type:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.18.05.png" />
+					</section>
+					<section>
+						<h4>implicit return type:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.18.16.png" />
+					</section>
+					<section>
+						<h4>explicit return type:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.18.37.png" />
+					</section>
+					<section>
+						<h4>type safety in action:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.18.47.png" />
+					</section>
+					<section>
+						<h4>not used variable</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.19.05.png" />
+					</section>
+					<section>
+						<h4>tsconfig option:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.19.28.png" />
+					</section>
+					<section>
+						<h4>type safety in action:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.19.44.png" />
+					</section>
+					<section>
+						<h4>...what now???</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.19.58.png" />
+					</section>
+					<section>
+						<h4>there's a loose string:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.20.06.png" />
+					</section>
+					<section>
+						<h4>implicit undefined as potential return type:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.20.28.png" />
+					</section>
+					<section>
+						<h4>potential problem if relying on implicity:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.20.54.png" />
+					</section>
+					<section>
+						<h4>...that can be avoided:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.21.05.png" />
+					</section>
+					<section>
+						<h4>type safety in action:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.21.16.png" />
+					</section>
+					<section>
+						<h4>no errors visible, but what if...:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.21.32.png" />
+					</section>
+					<section>
+						<h4>another loose string i.e. unused variable:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.21.43.png" />
+					</section>
+					<section>
+						<h4>as a bug that can be patched:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.21.53.png" />
+					</section>
+					<section>
+						<h4>type safety in action:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.22.02.png" />
+					</section>
+					<section>
+						<h4>type safety in action:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.22.17.png" />
+					</section>
+					<section>
+						<h4>no parameters provided:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.22.34.png" />
+					</section>
+					<section>
+						<h4>too many parameters:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.22.51.png" />
+					</section>
+					<section>
+						<h4>the need for optional parameter:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.23.13.png" />
+					</section>
+					<section>
+						<h4>optional param:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.23.24.png" />
+					</section>
+					<section>
+						<h4>type safety in action - possiblu undefined:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.23.31.png" />
+					</section>
+					<section>
+						<h4>fix option 1:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.23.49.png" />
+					</section>
+					<section>
+						<h4>fix option 2:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.24.19.png" />
+					</section>
+					<section>
+						<h4>compiler wrap-up:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2009.24.34.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 4:</h4> <small style="color:red">(@Filip: now is the time for 3 previous tasks + a new one :))) )</small>
+						<small>Extend the function <strong>calculateDiscountPrice</strong> to accept an optional fourth parameter for a special coupon code (string) that applies an additional discount. The function should first apply the category discount and then the coupon discount if available.
+							<ul>
+								<li>Add a new parameter to the function signature for the coupon code, which should be optional.</li>
+								<li>Update the function to apply an additional discount based on the coupon.</li>
+							</ul>
+
+						<pre class="fragment"><code class="javascript" data-trim data-noescape>
+enum Category {
+    Electronics,
+    Books,
+    Clothing
+}
+
+function calculateDiscountPrice(price: number, category: Category, quantity: number, coupon?: string): number {
+    let discount = 0;
+    switch (category) {
+        case Category.Electronics:
+            discount += 0.10;
+            break;
+        case Category.Books:
+            discount += 0.15;
+            break;
+        case Category.Clothing:
+            discount += 0.05;
+            break;
+    }
+
+    if (coupon === "EXTRA10") {
+        discount += 0.10; // Additional 10% discount
+    }
+
+    const totalPrice = price * quantity * (1 - discount);
+    return totalPrice;
+}
+
+console.log(calculateDiscountPrice(100, Category.Books, 2)); // Without coupon
+console.log(calculateDiscountPrice(100, Category.Books, 2, "EXTRA10")); // With coupon "EXTRA10"
+
+							x
+
+						</code></pre></small>
+					</section>
+
+					<section>
+						<h4>Objects:</h4>
+					</section>
+					<section>
+						<h4>type safety in action:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2011.46.06.png" />
+					</section>
+					<section>
+						<h4>implicit object types:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2011.46.24.png" />
+					</section>
+					<section>
+						<h4>why?</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2011.46.44.png" />
+					</section>
+					<section>
+						<h4>that's why:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2011.47.01.png" />
+					</section>
+					<section>
+						<h4>variable initialization in proper shape:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2011.47.21.png" />
+					</section>
+					<section>
+						<h4>...yet optional type would also do:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2011.47.29.png" />
+					</section>
+					<section>
+						<h4>readonly property:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2011.48.38.png" />
+					</section>
+					<section>
+						<h4>also functions as properties must be typed:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2011.49.13.png" />
+					</section>
+					<section>
+						<h4>proper shape on a typed object:</h4>
+						<img src="res/fundamentals/Screenshot%202024-02-28%20at%2011.49.33.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 5:</h4><span style="color:red"></span>
+						<small>Write a function describeBook that takes an object representing a book with properties for the title, author, and number of pages, and returns a string summarizing the book.<br><br>
+							Add type annotations for the book parameter by specifying the types of title, author, and pages directly in the function's parameters
+						<pre class="fragment"><code class="javascript" data-trim data-noescape>
+function describeBook(book: { title: string; author: string; pages: number }): string {
+    return `${book.title} by ${book.author}, ${book.pages} pages`;
+}
+
+console.log(describeBook({ title: 'The Hobbit', author: 'J.R.R. Tolkien', pages: 310 }));
+						</code></pre></small>
+					</section>
+
+
+					<section data-background-color="#caf9e6">
+						<h4>Exercises:</h4>
+						<a target="_blank" href="res/exercises/3-%20Fundamentals%20Exercises.pdf" >exercises</a>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h4>advanced types</h4>
+					</section>
+					<section>
+						<h4>in this section:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.00.53.png" />
+					</section>
+
+					<section>
+						<h4>Type aliases:</h4>
+					</section>
+					<section>
+						<h4>What if we'd want 2 employees?</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.05.22.png" />
+					</section>
+					<section>
+						<h4>principle:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.06.03.png" />
+					</section>
+					<section>
+						<h4>custom type:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.06.38.png" />
+					</section>
+					<section>
+						<h4>using custom type:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.06.57.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 6:</h4><span style="color:red"></span>
+						<small>change previous exercise so it uses type aliases
+						<pre class="fragment"><code class="javascript" data-trim data-noescape>
+type Book = { title: string; author: string; pages: number }
+
+function describeBook(book: Book): string {
+    return `${book.title} by ${book.author}, ${book.pages} pages`;
+}
+
+console.log(describeBook({ title: 'The Hobbit', author: 'J.R.R. Tolkien', pages: 310 }));
+						</code></pre></small>
+					</section>
+
+					<section>
+						<h4>Union types:</h4>
+					</section>
+					<section>
+						<h4>logical OR:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.12.18.png" />
+					</section>
+					<section>
+						<h4>both options valid:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.12.37.png" />
+					</section>
+					<section>
+						<h4>IDE support limited because of |:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.12.56.png" />
+					</section>
+					<section>
+						<h4>type narrowing:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.13.25.png" />
+					</section>
+					<section>
+						<h4>type narrowing:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.13.46.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 7:</h4><span style="color:red"></span>
+						<small>Write a TypeScript function that takes a shape object as its parameter. The shape can be a circle, square, or rectangle. The function should calculate and return the area of the shape.<br><br>
+							circle: PI * radius ** 2<br>
+							square: sideLength ** 2<br>
+							rectangle: width * height
+						<pre class="fragment"><code class="javascript" data-trim data-noescape>
+type Circle = {
+    kind: 'circle';
+    radius: number;
+};
+
+type Square = {
+    kind: 'square';
+    sideLength: number;
+};
+
+type Rectangle = {
+    kind: 'rectangle';
+    width: number;
+    height: number;
+};
+
+type Shape = Circle | Square | Rectangle;
+
+
+function calculateArea(shape: Shape): number|false {
+    if (shape.kind === 'circle') {
+        return Math.PI * shape.radius ** 2;
+    } else if (shape.kind === 'square') {
+        return shape.sideLength ** 2;
+    } else if (shape.kind === 'rectangle') {
+        return shape.width * shape.height;
+    }
+  return false
+}
+
+const circle: Circle = { kind: 'circle', radius: 5 };
+const square: Square = { kind: 'square', sideLength: 10 };
+const rectangle: Rectangle = { kind: 'rectangle', width: 4, height: 8 };
+
+console.log(calculateArea(circle));      // Output: 78.53981633974483
+console.log(calculateArea(square));      // Output: 100
+console.log(calculateArea(rectangle));   // Output: 32
+
+						</code></pre></small>
+					</section>
+
+					<section>
+						<h4>Intersection types:</h4>
+					</section>
+					<section>
+						<h4>both number and string???:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.16.22.png" />
+					</section>
+					<section>
+						<h4>usable when creating custom objects:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.17.07.png" />
+					</section>
+					<section>
+						<h4>intersection example:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.17.28.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 8:</h4><span style="color:red"></span>
+						<small>Define two type aliases, User (userId and name) and Preferences (prefersDarkMode and favoriteLanguage), and use an intersection type to create a comprehensive user profile type. <br>Write a function that takes an extended user profile object, merges user details with preferences, and returns a summary string.
+						<pre class="fragment"><code class="javascript" data-trim data-noescape>
+type User = {
+    userId: string;
+    name: string;
+};
+
+type Preferences = {
+    prefersDarkMode: boolean;
+    favoriteLanguage: string;
+};
+
+type UserProfile = User & Preferences;
+
+function createUserProfileSummary(userProfile: UserProfile): string {
+    const { name, prefersDarkMode, favoriteLanguage } = userProfile;
+    return `${name} prefers ${prefersDarkMode ? 'dark' : 'light'} mode and likes ${favoriteLanguage}.`;
+}
+
+const userProfile: UserProfile = {
+    userId: '12345',
+    name: 'Jane Doe',
+    prefersDarkMode: true,
+    favoriteLanguage: 'TypeScript'
+};
+
+console.log(createUserProfileSummary(userProfile));
+
+						</code></pre></small>
+					</section>
+
+					<section>
+						<h4>Literal types:</h4>
+					</section>
+					<section>
+						<h4>definition too wide:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.20.25.png" />
+					</section>
+					<section>
+						<h4>only this value is allowed:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.20.43.png" />
+					</section>
+					<section>
+						<h4>50 <> 51:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.20.49.png" />
+					</section>
+					<section>
+						<h4>unions also work:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.21.15.png" />
+					</section>
+					<section>
+						<h4>custom literal union:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.21.42.png" />
+					</section>
+					<section>
+						<h4>it also works with strings:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.22.13.png" />
+					</section>
+
+					<section>
+						<h4>nullable types:</h4>
+					</section>
+					<section>
+						<h4>null is disallowed by default:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.27.20.png" />
+					</section>
+					<section>
+						<h4>null <> string:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.27.30.png" />
+					</section>
+					<section>
+						<h4>setting as part of "strict":</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.27.43.png" />
+					</section>
+					<section>
+						<h4>how to allow nulls:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.28.16.png" />
+					</section>
+					<section>
+						<h4>null as a type:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.28.27.png" />
+					</section>
+					<section>
+						<h4>undefined as a type:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.28.40.png" />
+					</section>
+
+					<section>
+						<h4>optional chaining:</h4>
+					</section>
+					<section>
+						<h4>what's the potential problem?</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.33.11.png" />
+					</section>
+					<section>
+						<h4>.birthday potentially not accessible</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.33.52.png" />
+					</section>
+					<section>
+						<h4>type narrowing:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.34.03.png" />
+					</section>
+					<section>
+						<h4>covering null and undefined :</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.34.24.png" />
+					</section>
+					<section>
+						<h4>optional chaining in action (undefined):</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.34.39.png" />
+					</section>
+					<section>
+						<h4>example with undefined:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.35.02.png" />
+					</section>
+					<section>
+						<h4>example with value:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.35.11.png" />
+					</section>
+					<section>
+						<h4>throwing the value:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.35.18.png" />
+					</section>
+					<section>
+						<h4>works in object properties:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.35.33.png" />
+					</section>
+					<section>
+						<h4>and can be nested:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.37.13.png" />
+					</section>
+					<section>
+						<h4>...thus covering all the paths:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.37.24.png" />
+					</section>
+					<section>
+						<h4>instead of this:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.37.50.png" />
+					</section>
+					<section>
+						<h4>use optional chaining in array:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.38.01.png" />
+					</section>
+					<section>
+						<h4>works also in function calls:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.38.27.png" />
+					</section>
+
+					<section>
+						<h4>the nullish coalescing operator:</h4>
+					</section>
+					<section>
+						<h4>the need: treat falsy condition as proper value:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.42.51.png" />
+					</section>
+					<section>
+						<h4>the need: if speed is null, set it to 30:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.43.26.png" />
+					</section>
+					<section>
+						<h4>but how does || work?:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.43.42.png" />
+					</section>
+					<section>
+						<h4>would tht cover 0 condition?</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.44.04.png" />
+					</section>
+					<section>
+						<h4>yet this might be easier:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2012.44.26.png" />
+					</section>
+
+					<section>
+						<h4>Type assertions:</h4>
+					</section>
+					<section>
+						<h4>lets take something from the DOM:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.04.52.png" />
+					</section>
+					<section>
+						<h4>it can be any of the HTMLElements available:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.05.12.png" />
+					</section>
+					<section>
+						<h4>one of the elements implementing htmlElement is htmlInputElement yet its paren't does't have value attribute:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.05.41.png" />
+					</section>
+					<section>
+						<h4>I know more than you do:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.06.20.png" />
+					</section>
+					<section>
+						<h4>TS accepts:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.06.47.png" />
+					</section>
+					<section>
+						<h4>..and obeys:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.06.55.png" />
+					</section>
+					<section>
+						<h4>another way of using 'as':</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.07.33.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 9:</h4><span style="color:red"></span>
+						<small>Create a function that extracts and processes <strong>subscription</strong> details from a nested user object. The function should safely access the subscription <strong>status</strong> and <strong>plan</strong> using optional chaining and return a specific message based on the subscription details using type assertions and literal types.</small>
+						<br><br><small><ul><li>Define a <strong>User</strong> type (id, name) with nested optional properties for <strong>subscription</strong> information like <strong>status</strong>(active, inactive), <strong>plan</strong> (free, premium). Use literal types for status and plan thinking about potential side effects.</li></ul></small>
+						<br><br><small>Implement a function <strong>getSubscriptionMessage</strong> that takes a User object and returns a message about the user's subscription status. Use optional chaining to safely access nested properties and type assertions to handle default values.</small>
+						<small><pre><code class="javascript" data-trim data-noescape>// active premium user
+{
+    id: '1',
+    name: 'Alice',
+    subscription: { status: 'active', plan: { name: 'premium' } }
+}
+
+//inactive user
+{
+    id: '2',
+    name: 'Bob'
+}
+						</code></pre></small>
+					</section>
+					<section data-background-color="#caf9e6">
+						<small><pre><code class="javascript" data-trim data-noescape>
+type User = {
+    id: string;
+    name: string;
+    subscription?: {
+        status: 'active' | 'inactive';
+        plan?: {
+            name: 'free' | 'premium';
+        };
+    };
+};
+
+function getSubscriptionMessage(user: User): string {
+    const status = user.subscription?.status ?? 'inactive';
+    const planName = user.subscription?.plan?.name as 'free' | 'premium' | 'no plan';
+
+    if (status === 'active') {
+        switch (planName) {
+            case 'premium':
+                return `${user.name} is subscribed to the Premium plan.`;
+            case 'free':
+                return `${user.name} is subscribed to the Free plan.`;
+            default:
+                return `${user.name} has an active subscription with no specific plan.`;
+        }
+    } else {
+        return `${user.name} does not have an active subscription.`;
+    }
+}
+
+
+const activePremiumUser: User = {
+    id: '1',
+    name: 'Alice',
+    subscription: { status: 'active', plan: { name: 'premium' } }
+};
+
+const inactiveUser: User = {
+    id: '2',
+    name: 'Bob'
+};
+
+console.log(getSubscriptionMessage(activePremiumUser)); // "Alice is subscribed to the Premium plan."
+console.log(getSubscriptionMessage(inactiveUser)); // "Bob does not have an active subscription."
+
+						</code></pre></small>
+					</section>
+
+					<section>
+						<h4>the unknown type:</h4>
+					</section>
+					<section>
+						<h4>any by definition is bad:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.10.11.png" />
+					</section>
+					<section>
+						<h4>type checking not possible:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.10.33.png" />
+					</section>
+					<section>
+						<h4>unknown to the rescue:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.11.41.png" />
+					</section>
+					<section>
+						<h4>type narrowing:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.11.58.png" />
+					</section>
+					<section>
+						<h4>checking if it's an instance of a class:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.12.21.png" />
+					</section>
+
+					<section>
+						<h4>the never type:</h4>
+					</section>
+					<section>
+						<h4>we expect the function will never return:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.14.20.png" />
+					</section>
+					<section>
+						<h4>console.log is unreachable:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.14.29.png" />
+					</section>
+					<section>
+						<h4>slight visual indication might not be enough:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.14.41.png" />
+					</section>
+					<section>
+						<h4>another compiler option:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.15.02.png" />
+					</section>
+					<section>
+						<h4>now it's clear what's happening:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.15.14.png" />
+					</section>
+					<section>
+						<h4>error message describing problem:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.15.24.png" />
+					</section>
+					<section>
+						<h4>implicit return hides the problem:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.16.29.png" />
+					</section>
+					<section>
+						<h4>similar use case but with throwing error:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.18.09.png" />
+					</section>
+					<section>
+						<h4>clear indication of a problem:</h4>
+						<img src="res/advanced_types/Screenshot%202024-02-28%20at%2014.18.21.png" />
+					</section>
+
+					<section data-background-color="#caf9e6">
+						<h4><s>exercises:</s> wrap-up</h4>
+						<a target="_blank" href="res/exercises/4-_Advanced_Types.pdf" ><s>exercises</s> wrap-up</a>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h4>classes, interfaces and OOP</h4>
+					</section>
+					<section>
+						<h4>in this section:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.29.19.png" />
+					</section>
+					<section>
+						<h4>in this section:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.30.37.png" />
+					</section>
+					<section>
+						<h4>paradigms to choose from:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.31.08.png" />
+					</section>
+					<section>
+						<h4>what is an object:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.31.42.png" />
+					</section>
+					<section>
+						<h4>object contains:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.32.11.png" />
+					</section>
+					<section>
+						<h4>objects as specialized entities:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.41.32.png" />
+					</section>
+					<section>
+						<h4>which one is better?</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.42.02.png" />
+					</section>
+					<section>
+						<h4>none \ both \ it depends</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.42.34.png" />
+					</section>
+					<section>
+						<h4>specialized tool for specialized use case:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.42.47.png" />
+					</section>
+					<section>
+						<h4>CLASS definition:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.44.45.png" />
+					</section>
+					<section>
+						<h4>dictionary:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.45.04.png" />
+					</section>
+					<section>
+						<h4>class in TS means requirements:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.45.36.png" />
+					</section>
+					<section>
+						<h4>problem description:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.45.43.png" />
+					</section>
+					<section>
+						<h4>what's a constructor:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.46.23.png" />
+					</section>
+					<section>
+						<h4>no return type since it's an instance of a class</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.46.31.png" />
+					</section>
+					<section>
+						<h4>this keyword and its plumbing:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.46.43.png" />
+					</section>
+					<section>
+						<h4>type safety in place:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.46.59.png" />
+					</section>
+					<section>
+						<h4>example method:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.47.42.png" />
+					</section>
+					<section>
+						<h4>compile to JS:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.47.55.png" />
+					</section>
+					<section>
+						<h4>pure JS class:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.48.15.png" />
+					</section>
+					<section>
+						<h4>types definition are not JS:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2014.48.22.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 10:</h4><span style="color:red"></span>
+						<small>Create a <strong>Book</strong> class in TypeScript that includes properties for the <strong>title</strong>, <strong>author</strong>, and number of <strong>pages</strong>. Include a constructor to initialize these properties and a method <strong>describe</strong> to display information about the book.</small>
+						<small><pre class="fragment"><code class="javascript" data-trim data-noescape>
+class Book {
+    title: string;
+    author: string;
+    pages: number;
+
+    constructor(title: string, author: string, pages: number) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+
+    describe(): string {
+        return `${this.title} by ${this.author} with ${this.pages} pages`;
+    }
+}
+						</code></pre></small>
+					</section>
+
+					<section>
+						<h4>creating objects:</h4>
+					</section>
+					<section>
+						<h4>"new" keyword</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.04.30.png" />
+					</section>
+					<section>
+						<h4>access to methods and properties:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.04.47.png" />
+					</section>
+					<section>
+						<h4>calling properties like variables:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.05.18.png" />
+					</section>
+					<section>
+						<h4>result:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.05.36.png" />
+					</section>
+					<section>
+						<h4>undestanding account object:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.06.05.png" />
+					</section>
+					<section>
+						<h4>account as an object:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.06.24.png" />
+					</section>
+					<section>
+						<h4>checking type of account variable:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.06.53.png" />
+					</section>
+					<section>
+						<h4>output:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.07.06.png" />
+					</section>
+					<section>
+						<h4>checking for instance:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.07.29.png" />
+					</section>
+					<section>
+						<h4>bool as a result:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.07.39.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 11:</h4><span style="color:red"></span>
+						<small>
+							Create an instance of the Book class and call the describe method to print the book's details.
+						</small>
+						<small><pre class="fragment"><code class="javascript" data-trim data-noescape>
+const myBook = new Book("The Hobbit", "J.R.R. Tolkien", 310);
+console.log(myBook.describe());
+
+						</code></pre></small>
+					</section>
+
+					<section>
+						<h4>readonly and optional properties:</h4>
+					</section>
+					<section>
+						<h4>potential risk:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.43.20.png" />
+					</section>
+					<section>
+						<h4>even higher risk:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.43.31.png" />
+					</section>
+					<section>
+						<h4>readonly keyword:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.43.41.png" />
+					</section>
+					<section>
+						<h4>type safety in action:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.44.06.png" />
+					</section>
+					<section>
+						<h4>optional parameters:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.44.28.png" />
+					</section>
+					<section>
+						<h4>optional parameters:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.44.37.png" />
+					</section>
+
+					<section>
+						<h4>access control keywords:</h4>
+					</section>
+					<section>
+						<h4>everything is public by default:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.47.39.png" />
+					</section>
+					<section>
+						<h4>which is a problem:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.47.49.png" />
+					</section>
+					<section>
+						<h4>access modifiers:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.48.04.png" />
+					</section>
+					<section>
+						<h4>explicitly stating public :</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.48.16.png" />
+					</section>
+					<section>
+						<h4>enhancing security:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.48.25.png" />
+					</section>
+					<section>
+						<h4>TS in action:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.48.31.png" />
+					</section>
+					<section>
+						<h4>ts in action:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.48.40.png" />
+					</section>
+					<section>
+						<h4>underscore as convention:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.49.09.png" />
+					</section>
+					<section>
+						<h4>but how to show the balance?</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.49.23.png" />
+					</section>
+					<section>
+						<h4>by creating an access method:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.49.53.png" />
+					</section>
+					<section>
+						<h4>methods can also be private:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.50.25.png" />
+					</section>
+					<section>
+						<h4>and IDE will respect that:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.50.33.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 12:</h4><span style="color:red"></span>
+						<small>
+							Update the Book class with the following enhancements:
+							<ul>
+								<li>Make the title property readonly, indicating that its value cannot be changed after initialization</li>
+								<li>Add an optional isDigital parameter to the constructor with a default value of false. This parameter indicates whether the book is a digital copy</li>
+								<li>Make the pages property private and rename it to _pages</li>
+								<li>Add a private method named formatPages that returns a string. This method should return "X pages" for physical books and "X digital pages" for digital books, where X is the number of pages</li>
+								<li>Add a public method named getPages that uses the formatPages method to return the formatted pages string</li>
+							</ul>
+						</small>
+						<small><pre><code class="javascript" data-trim data-noescape>// test with following data
+const physicalBook = new Book("The Hobbit", "J.R.R. Tolkien", 310);
+const digitalBook = new Book("1984", "George Orwell", 328, true);
+
+console.log(physicalBook.describe());
+console.log(digitalBook.describe());
+						</code></pre></small>
+					</section>
+					<section data-background-color="#caf9e6">
+						<small><pre><code class="javascript" data-trim data-noescape>
+class Book {
+    readonly title: string;
+    author: string;
+    private _pages: number;
+    isDigital: boolean;
+
+    constructor(title: string, author: string, pages: number, isDigital: boolean = false) {
+        this.title = title;
+        this.author = author;
+        this._pages = pages;
+        this.isDigital = isDigital;
+    }
+
+    private formatPages(): string {
+        return this.isDigital ? `${this._pages} digital pages` : `${this._pages} pages`;
+    }
+
+    public getPages(): string {
+        return this.formatPages();
+    }
+
+    describe(): string {
+        return `${this.title} by ${this.author} with ${this.getPages()}`;
+    }
+}
+
+const physicalBook = new Book("The Hobbit", "J.R.R. Tolkien", 310);
+const digitalBook = new Book("1984", "George Orwell", 328, true);
+
+console.log(physicalBook.describe());
+console.log(digitalBook.describe());
+
+						</code></pre></small>
+					</section>
+
+					<section>
+						<h4>parameter properties:</h4>
+					</section>
+					<section>
+						<h4>default way is too verbose:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.56.47.png" />
+					</section>
+					<section>
+						<h4>giving types in the constructor:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.57.02.png" />
+					</section>
+					<section>
+						<h4>also mentioning it's readonly:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.57.17.png" />
+					</section>
+					<section>
+						<h4>and the same for the rest of parameters:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.57.29.png" />
+					</section>
+					<section>
+						<h4>and the same for the rest of parameters:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.58.03.png" />
+					</section>
+					<section>
+						<h4>only optionals are required ;)</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.58.09.png" />
+					</section>
+					<section>
+						<h4>clean constructor:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2015.58.37.png" />
+					</section>
+
+					<section>
+						<h4>getters and setters:</h4>
+					</section>
+					<section>
+						<h4>problem: function call with no parameters?</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2016.06.01.png" />
+					</section>
+					<section>
+						<h4>would be nicer that way:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2016.06.10.png" />
+					</section>
+					<section>
+						<h4>'get' keyword:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2016.06.30.png" />
+					</section>
+					<section>
+						<h4>TS guarding the getter:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2016.06.47.png" />
+					</section>
+					<section>
+						<h4>'set' keyword:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2016.07.19.png" />
+					</section>
+
+					<section>
+						<h4>index signatures:</h4>
+					</section>
+					<section>
+						<h4>would be great to check for proper parameter names:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2016.14.44.png" />
+					</section>
+					<section>
+						<h4>seatnumber as a placeholder:</h4>
+						<img src="res/oop/Screenshot%202024-02-28%20at%2016.14.56.png" />
+					</section>
+
+					<section>
+						<h4>static members:</h4>
+					</section>
+					<section>
+						<h4>Uber simulation:</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.13.11.png" />
+					</section>
+					<section>
+						<h4>counting al the rides in the app ecosystem:</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.13.48.png" />
+					</section>
+					<section>
+						<h4>already see the problem?</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.14.12.png" />
+					</section>
+					<section>
+						<h4>the problem:</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.14.21.png" />
+					</section>
+					<section>
+						<h4>each object has own activeRides property:</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.14.37.png" />
+					</section>
+					<section>
+						<h4>static means: make it on class level</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.15.15.png" />
+					</section>
+					<section>
+						<h4>TS guarding us from potential problems:</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.15.31.png" />
+					</section>
+					<section>
+						<h4>CLASS level (read: capital Ride.):</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.15.48.png" />
+					</section>
+					<section>
+						<h4>fixing increment/decrement functionality:</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.16.06.png" />
+					</section>
+					<section>
+						<h4>output:</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.16.15.png" />
+					</section>
+					<section>
+						<h4>but still accessible from outside:</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.16.39.png" />
+					</section>
+					<section>
+						<h4>...not anymore:)</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.16.58.png" />
+					</section>
+					<section>
+						<h4>adding _ + adding getter:</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.17.17.png" />
+					</section>
+					<section>
+						<h4>problem seems fixed:</h4>
+						<img src="res/oop/Screenshot%202024-02-29%20at%2016.17.46.png" />
+					</section>
+					<section>
+						<h4>indeed:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.06.03.png" />
+					</section>
+					<section>
+						<h4>takeaway: static means single instance in memory:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.07.27.png" />
+					</section>
+
+<!--					<section>-->
+<!--						<h4>inheritance:</h4>-->
+<!--						<img src="res/oop/" />-->
+<!--					</section>-->
+<!--					<section>-->
+<!--						<h4>method overriding:</h4>-->
+<!--						<img src="res/oop/" />-->
+<!--					</section>-->
+<!--					<section>-->
+<!--						<h4>polymorphism:</h4>-->
+<!--						<img src="res/oop/" />-->
+<!--					</section>-->
+<!--					<section>-->
+<!--						<h4>private vs protected members:</h4>-->
+<!--						<img src="res/oop/" />-->
+<!--					</section>-->
+<!--					<section>-->
+<!--						<h4>abstract classes and methods:</h4>-->
+<!--						<img src="res/oop/" />-->
+<!--					</section>-->
+
+					<section>
+						<h4>interfaces:</h4>
+					</section>
+					<section>
+						<h4>refresher:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.52.41.png" />
+					</section>
+					<section>
+						<h4>definition:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.52.52.png" />
+					</section>
+					<section>
+						<h4>use case: different calendars with different implementations</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.53.10.png" />
+					</section>
+					<section>
+						<h4>example class:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.53.44.png" />
+					</section>
+					<section>
+						<h4>since it's only about definition, it can be abstracted :</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.54.04.png" />
+					</section>
+					<section>
+						<h4>compiling:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.54.34.png" />
+					</section>
+					<section>
+						<h4>takeaway: JS doesn't support abstract classes:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.54.42.png" />
+					</section>
+					<section>
+						<h4>interface definition:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.55.33.png" />
+					</section>
+					<section>
+						<h4>compiling:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.55.47.png" />
+					</section>
+					<section>
+						<h4>uhm... what?:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.55.54.png" />
+					</section>
+					<section>
+						<h4>if it would be a class:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.56.45.png" />
+					</section>
+					<section>
+						<h4>yet interface requires implementing:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.57.13.png" />
+					</section>
+					<section>
+						<h4>TS in action:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2017.08.41.png" />
+					</section>
+					<section>
+						<h4>example implemetation:</h4>
+						<img src="res/oop/Screenshot%202024-03-01%20at%2016.58.02.png" />
+					</section>
+
+					<section data-background-color="#caf9e6">
+						<h4><s>exercises:</s> interfaces vs types</h4>
+						<a target="_blank" href="res/exercises/17-_Interfaces_vs_Types.pdf" ><s>exercises</s> interfaces vs types</a>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h4>generics</h4>
+					</section>
+					<section>
+						<h4>in this section:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.30.48.png" />
+					</section>
+					<section>
+						<h4>the problem - number as an ID:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.32.18.png" />
+					</section>
+					<section>
+						<h4>the problem - string as an ID:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.32.26.png" />
+					</section>
+					<section>
+						<h4>any would be too wide</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.32.47.png" />
+					</section>
+					<section>
+						<h4>and also not giving any IDE support:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.32.58.png" />
+					</section>
+					<section>
+						<h4>this seems too redundant:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.33.37.png" />
+					</section>
+
+					<section>
+						<h4>generic classes:</h4>
+					</section>
+					<section>
+						<h4><> a.k.a. make type a variable:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.35.01.png" />
+					</section>
+					<section>
+						<h4>T stands for template</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.35.15.png" />
+					</section>
+					<section>
+						<h4>putting type as variable:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.35.32.png" />
+					</section>
+					<section>
+						<h4>definition indicating there's a space for generic:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.35.42.png" />
+					</section>
+					<section>
+						<h4>and accepting a value:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.35.55.png" />
+					</section>
+					<section>
+						<h4>example call:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.37.04.png" />
+					</section>
+					<section>
+						<h4>yet we can put more parameters in the <>:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.37.30.png" />
+					</section>
+					<section>
+						<h4>and it can also work with implicits:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.37.50.png" />
+					</section>
+
+					<section>
+						<h4>generic functions:</h4>
+					</section>
+					<section>
+						<h4>the problem:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.38.52.png" />
+					</section>
+					<section>
+						<h4>the solution:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.39.21.png" />
+					</section>
+					<section>
+						<h4>functions doesn't work in class:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.40.16.png" />
+					</section>
+					<section>
+						<h4>but we can convert them to methods:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.40.22.png" />
+					</section>
+					<section>
+						<h4>and call appropriately:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.40.39.png" />
+					</section>
+					<section>
+						<h4>or as a static method:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.40.51.png" />
+					</section>
+
+					<section>
+						<h4>generic interfaces:</h4>
+					</section>
+					<section>
+						<h4>example interface</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.41.38.png" />
+					</section>
+					<section>
+						<h4>delivering generic to the interface</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.41.53.png" />
+					</section>
+					<section>
+						<h4>unions also works with generics:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.42.17.png" />
+					</section>
+					<section>
+						<h4>syntax problem:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.42.35.png" />
+					</section>
+					<section>
+						<h4>defining generic and passing it to the interface:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.42.50.png" />
+					</section>
+					<section>
+						<h4>complete implementation:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.43.07.png" />
+					</section>
+					<section>
+						<h4>the need: putting interface to the generic:</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.43.24.png" />
+					</section>
+					<section>
+						<h4>usage: User type with IDE support</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.43.54.png" />
+					</section>
+					<section>
+						<h4>usage: Product type with IDE support</h4>
+						<img src="res/generics/Screenshot%202024-02-29%20at%2016.44.03.png" />
+					</section>
+
+					<section>
+						<h4>generic constraints:</h4>
+					</section>
+					<section>
+						<h4>how to narrow allowed types within the generic:</h4>
+						<img src="res/generics/Screenshot%202024-03-01%20at%2008.16.10.png" />
+					</section>
+					<section>
+						<h4>how to accept only number or string:</h4>
+						<img src="res/generics/Screenshot%202024-03-01%20at%2008.16.35.png" />
+					</section>
+					<section>
+						<h4>how to accept only number or string:</h4>
+						<img src="res/generics/Screenshot%202024-03-01%20at%2008.16.40.png" />
+					</section>
+					<section>
+						<h4>extends keyword + union:</h4>
+						<img src="res/generics/Screenshot%202024-03-01%20at%2008.17.01.png" />
+					</section>
+					<section>
+						<h4>booleans are disallowed:</h4>
+						<img src="res/generics/Screenshot%202024-03-01%20at%2008.17.09.png" />
+					</section>
+					<section>
+						<h4>it's possible to extend custom objects:</h4>
+						<img src="res/generics/Screenshot%202024-03-01%20at%2008.17.24.png" />
+					</section>
+					<section>
+						<h4>like that:</h4>
+						<img src="res/generics/Screenshot%202024-03-01%20at%2008.17.33.png" />
+					</section>
+					<section>
+						<h4>...or own interface/type:</h4>
+						<img src="res/generics/Screenshot%202024-03-01%20at%2008.17.45.png" />
+					</section>
+					<section>
+						<h4>or even class that extends another class:</h4>
+						<img src="res/generics/Screenshot%202024-03-01%20at%2008.18.29.png" />
+					</section>
+					<section>
+						<h4>so instantiation of a class object is also valid:</h4>
+						<img src="res/generics/Screenshot%202024-03-01%20at%2008.18.47.png" />
+					</section>
+					<section>
+						<h4>the same goes for base Person class:</h4>
+						<img src="res/generics/Screenshot%202024-03-01%20at%2008.19.08.png" />
+					</section>
+
+					<section>
+						<h4>extending generic classes:</h4>
+						<img src="res/generics/" />
+					</section>
+
+					<section>
+						<h4>the keyof operator:</h4>
+						<img src="res/generics/" />
+					</section>
+
+					<section>
+						<h4>type mappings:</h4>
+						<img src="res/generics/" />
+					</section>
+
+					<section>
+						<h4>:</h4>
+						<img src="res/generics/" />
+					</section>
+
+					<section>
+						<h4>:</h4>
+						<img src="res/generics/" />
+					</section>
+				</section>
+<!--				<section>-->
+<!--					<section>-->
+<!--						<h4>decorators</h4>-->
+<!--					</section>-->
+<!--				</section>-->
+				<section>
+					<section>
+						<h4>JS integration</h4>
+					</section>
+					<section>
+						<h4>in this sections:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.18.43.png" />
+					</section>
+					<section>
+						<h4>including JS code:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.23.40.png" />
+					</section>
+					<section>
+						<h4>regular JS with no TS support:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.23.51.png" />
+					</section>
+					<section>
+						<h4>means no TS support at all:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.24.01.png" />
+					</section>
+					<section>
+						<h4>TS not able to reach JS code:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.24.14.png" />
+					</section>
+					<section>
+						<h4>compiler configuration option:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.24.29.png" />
+					</section>
+					<section>
+						<h4>compiler understands the JS:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.24.50.png" />
+					</section>
+					<section>
+						<h4>but converting project to JS fails:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.25.03.png" />
+					</section>
+					<section>
+						<h4>JS flavor should be changed:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.25.32.png" />
+					</section>
+					<section>
+						<h4>project works:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.25.39.png" />
+					</section>
+
+					<section>
+						<h4>type checking JS code:</h4>
+					</section>
+					<section>
+						<h4>valid code:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.30.46.png" />
+					</section>
+					<section>
+						<h4>invalid code:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.30.55.png" />
+					</section>
+					<section>
+						<h4>causing error:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.31.03.png" />
+					</section>
+					<section>
+						<h4>checkJS option:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.31.11.png" />
+					</section>
+					<section>
+						<h4>TS error during compilation:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.31.26.png" />
+					</section>
+					<section>
+						<h4>if we accept, @ts-...:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.31.54.png" />
+					</section>
+					<section>
+						<h4>code works not screaming at us:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.32.02.png" />
+					</section>
+					<section>
+						<h4>but now the problem is hidden:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.32.26.png" />
+					</section>
+					<section>
+						<h4>JSDoc to the rescue:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.33.19.png" />
+					</section>
+					<section>
+						<h4>describing params:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.33.25.png" />
+					</section>
+					<section>
+						<h4>typing the param:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.33.39.png" />
+					</section>
+					<section>
+						<h4>and also return value:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.33.48.png" />
+					</section>
+					<section>
+						<h4>error is more descriptive:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.33.56.png" />
+					</section>
+					<section>
+						<h4>and with IDE support:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.34.14.png" />
+					</section>
+					<section>
+						<h4>valid code:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.34.32.png" />
+					</section>
+					<section>
+						<h4>JSDoc accepts also descriptions:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.34.55.png" />
+					</section>
+					<section>
+						<h4>that will be shown in the IDE:</h4>
+						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.44.49.png" />
+					</section>
+
+
+<!--					<section>-->
+<!--						<h4>:</h4>-->
+<!--						<img src="res/integration_with_js/" />-->
+<!--					</section>-->
+
+				</section>
+				<section>
+					<section>
+						<h4>[react with TS]</h4>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h4>wrap-up</h4>
+					</section>
+				</section>
+
 			</div>
 		</div>
 
