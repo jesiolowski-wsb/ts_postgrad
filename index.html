@@ -1458,6 +1458,40 @@ console.log(digitalBook.describe());
 						<h4>clean constructor:</h4>
 						<img src="res/oop/Screenshot%202024-02-28%20at%2015.58.37.png" />
 					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 13:</h4><span style="color:red"></span>
+						<small>
+							modify Book class to make class definition less verbose
+						</small>
+						<small><pre class="fragment"><code class="javascript" data-trim data-noescape>
+class Book {
+    readonly title: string; // Explicit declaration is needed for public readonly fields
+
+    constructor(title: string, public author: string, private _pages: number, public isDigital: boolean = false) {
+        this.title = title;
+    }
+
+    private formatPages(): string {
+        return this.isDigital ? `${this._pages} digital pages` : `${this._pages} pages`;
+    }
+
+    public getPages(): string {
+        return this.formatPages();
+    }
+
+    describe(): string {
+        return `${this.title} by ${this.author} with ${this.getPages()}`;
+    }
+}
+
+const physicalBook = new Book("The Hobbit", "J.R.R. Tolkien", 310);
+const digitalBook = new Book("1984", "George Orwell", 328, true);
+
+console.log(physicalBook.describe());
+console.log(digitalBook.describe());
+
+						</code></pre></small>
+					</section>
 
 					<section>
 						<h4>getters and setters:</h4>
@@ -1482,6 +1516,66 @@ console.log(digitalBook.describe());
 						<h4>'set' keyword:</h4>
 						<img src="res/oop/Screenshot%202024-02-28%20at%2016.07.19.png" />
 					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 14:</h4><span style="color:red"></span>
+						<small>
+							provide getter and setter for _pages (bear in mind naming convention) disallowing pages to accept negative value
+						</small>
+						<small><pre class="fragment"><code class="javascript" data-trim data-noescape>
+class Book {
+    readonly title: string; // Explicit declaration is needed for public readonly fields
+
+    constructor(title: string, public author: string, private _pages: number, public isDigital: boolean = false) {
+        this.title = title;
+    }
+
+    // Getter for _pages
+    public get pages(): number {
+        return this._pages;
+    }
+
+    // Setter for _pages
+    public set pages(value: number) {
+        if (value < 0) {
+            throw new Error('Pages cannot be negative');
+        }
+        this._pages = value;
+    }
+
+    private formatPages(): string {
+        return this.isDigital ? `${this._pages} digital pages` : `${this._pages} pages`;
+    }
+
+    public getPages(): string {
+        return this.formatPages();
+    }
+
+    describe(): string {
+        return `${this.title} by ${this.author} with ${this.getPages()}`;
+    }
+}
+
+const physicalBook = new Book("The Hobbit", "J.R.R. Tolkien", 310);
+const digitalBook = new Book("1984", "George Orwell", 328, true);
+
+// Using the getter
+console.log(`Physical book pages: ${physicalBook.pages}`);
+console.log(`Digital book pages: ${digitalBook.pages}`);
+
+// Using the setter to update the number of pages
+physicalBook.pages = 315; // Updating the number of pages for the physical book
+console.log(physicalBook.describe());
+
+// Attempting to set a negative number of pages will throw an error
+try {
+    digitalBook.pages = -10;
+} catch (error) {
+    console.error(error.message);
+}
+
+						</code></pre></small>
+					</section>
+
 
 					<section>
 						<h4>index signatures:</h4>
@@ -1561,6 +1655,187 @@ console.log(digitalBook.describe());
 					<section>
 						<h4>takeaway: static means single instance in memory:</h4>
 						<img src="res/oop/Screenshot%202024-03-01%20at%2016.07.27.png" />
+					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 15:</h4><span style="color:red"></span>
+						<small>
+							<ul>
+								<li>Implement MusicAlbum class with properties for album ID, title, artist, and track count.</li>
+								<li>Implement MusicLibrary class that manages a collection of MusicAlbum instances, using static methods and properties.</li>
+								<li>Use getters and setters to validate album track counts.</li>
+								<li>Utilize TypeScript's index signature feature for dynamic access to albums in the library.</li>
+							</ul><br><br>
+							<div>Requirements:</div>
+							<ol>
+								<li>MusicAlbum Class:
+									<ul>
+										<li>Properties:
+											<ul>
+												<li>id (string): Unique identifier for the album.</li>
+												<li>title (string): Title of the album.</li>
+												<li>artist (string): Name of the artist.</li>
+												<li>_tracks (number): Private property for the number of tracks in the album.</li>
+											</ul>
+										</li>
+										<li>Getters and Setters:
+											<ul><li>Implement a getter and a setter for _tracks to ensure the album has at least one track.</li></ul>
+										</li>
+										<li>Methods:
+											<ul><li>describe(): Returns a string describing the album (e.g., "Thriller by Michael Jackson, 9 tracks.").</li></ul>
+										</li>
+									</ul>
+								</li>
+							</ol>
+						</small>
+					</section>
+					<section data-background-color="#caf9e6">
+						<small>
+							<ol start="2">
+								<li>MusicLibrary Class:
+									<ul>
+										<li>Static Properties:
+											<ul><li>albums: A private static object to store MusicAlbum instances, using album IDs as keys.</li></ul>
+										</li>
+										<li>Static Methods:
+											<ul>
+												<li>addAlbum(album: MusicAlbum): Adds a new album to the library. Throws an error if an album with the same ID already exists.</li>
+												<li>getAlbum(id: string): Retrieves an album by ID. Throws an error if the album is not found.</li>
+												<li>removeAlbum(id: string): Removes an album from the library by ID. Throws an error if the album is not found.</li>
+											</ul>
+
+										</li>
+										<li>Static Getter:
+											<ul><li>allAlbums: Returns all albums in the library.</li></ul>
+										</li>
+									</ul>
+								</li>
+
+								<li>
+									Index Signature:
+									<ul><li>Utilize the index signature in MusicLibrary to facilitate dynamic access to albums by their IDs.</li></ul>
+								</li>
+							</ol>
+						</small>
+					</section>
+
+					<section data-background-color="#caf9e6">
+						<small>
+							test data:
+						</small>
+						<small><pre><code class="javascript" data-trim data-noescape>
+const album1 = new MusicAlbum("L1", "Thriller", "Michael Jackson", 5);
+const album2 = new MusicAlbum("R2", "Back in Black", "AC/DC", 8);
+
+MusicLibrary.addAlbum(album1);
+MusicLibrary.addAlbum(album2);
+
+console.log("\n=== Describing single albums: ")
+console.log(MusicLibrary.getAlbum("L1").describe());
+console.log(MusicLibrary.getAlbum("R2").describe());
+
+console.log("\n=== Setting the album tracks to 10, describing single album: ")
+// Update tracks using setter
+album1.tracks = 10;
+console.log(album1.describe());
+
+console.log("\n=== Show all available albums: ")
+// Access all albums
+console.log(MusicLibrary.allAlbums);
+
+console.log("\n=== Removing the album L1. one is left: ")
+// Remove an album
+MusicLibrary.removeAlbum("L1");
+console.log(MusicLibrary.allAlbums);
+						</code></pre></small>
+					</section>
+
+					<section data-background-color="#caf9e6">
+						<small><pre><code class="javascript" data-trim data-noescape>
+class MusicAlbum {
+    constructor(
+        public id: string,
+        public title: string,
+        public artist: string,
+        private _tracks: number
+    ) {}
+
+    // Getter for _tracks
+    get tracks(): number {
+        return this._tracks;
+    }
+
+    // Setter for _tracks
+    set tracks(value: number) {
+        if (value < 1) {
+            throw new Error("An album must have at least one track.");
+        }
+        this._tracks = value;
+    }
+
+    describe(): string {
+        return `${this.title} by ${this.artist}, ${this.tracks} tracks.`;
+    }
+}
+
+
+class MusicLibrary {
+    private static albums: { [id: string]: MusicAlbum } = {};
+
+    // Index Signature for dynamic access
+    static getAlbum(id: string): MusicAlbum {
+        const album = MusicLibrary.albums[id];
+        if (!album) {
+            throw new Error("Album not found.");
+        }
+        return album;
+    }
+
+    static addAlbum(album: MusicAlbum): void {
+        if (MusicLibrary.albums[album.id]) {
+            throw new Error("An album with this ID already exists in the library.");
+        }
+        MusicLibrary.albums[album.id] = album;
+    }
+
+    static removeAlbum(id: string): void {
+        if (!MusicLibrary.albums[id]) {
+            throw new Error("Album not found.");
+        }
+        delete MusicLibrary.albums[id];
+    }
+
+    // Static Getter for all albums
+    static get allAlbums(): { [id: string]: MusicAlbum } {
+        return MusicLibrary.albums;
+    }
+}
+
+const album1 = new MusicAlbum("L1", "Thriller", "Michael Jackson", 5);
+const album2 = new MusicAlbum("R2", "Back in Black", "AC/DC", 8);
+
+MusicLibrary.addAlbum(album1);
+MusicLibrary.addAlbum(album2);
+
+console.log("\n=== Describing single albums: ")
+console.log(MusicLibrary.getAlbum("L1").describe());
+console.log(MusicLibrary.getAlbum("R2").describe());
+
+console.log("\n=== Setting the album tracks to 10, describing single album: ")
+// Update tracks using setter
+album1.tracks = 10;
+console.log(album1.describe());
+
+console.log("\n=== Show all available albums: ")
+// Access all albums
+console.log(MusicLibrary.allAlbums);
+
+console.log("\n=== Removing the album L1. one is left: ")
+// Remove an album
+MusicLibrary.removeAlbum("L1");
+console.log(MusicLibrary.allAlbums);
+
+
+						</code></pre></small>
 					</section>
 
 <!--					<section>-->
@@ -1829,31 +2104,76 @@ console.log(digitalBook.describe());
 						<h4>the same goes for base Person class:</h4>
 						<img src="res/generics/Screenshot%202024-03-01%20at%2008.19.08.png" />
 					</section>
+					<section data-background-color="#caf9e6">
+						<h4>exercise 16:</h4><span style="color:red"></span>
+						<small>
+							Create a TypeScript class named DataStore. This class should be generic, allowing it to store any type of data. The class should implement the following functionalities:<br><br>
+							<ol>
+								<li>Add Item: Should be able to add an item of the generic type to the store.</li>
+								<li>Remove Item: Should be able to remove an item of the generic type from the store by a unique identifier (assume each item has an id property).</li>
+								<li>Find Item: Should be able to find an item by its unique identifier and return it.</li>
+								<li>Update Item: Should be able to update an item with new data given its unique identifier.</li>
+								<li>bonus: Provide a method to clear all items from the store</li>
+								<li>bonus: Provide a method to get all the items currently stored</li>
+							</ol><br><br>Requirements
+							<ul>
+								<li>Use TypeScript generics to make the DataStore class work with any data type.</li>
+								<li>Assume that all items stored will have an id property of type string or number.</li>
+								<li>Implement error handling to gracefully manage attempts to remove or update items that do not exist in the store.</li>
+								<li>Include comments in your code to explain your logic.</li>
+								<li>Write a brief usage example that creates an instance of DataStore for a specific type (e.g., User), adds a couple of items, updates one item, and then removes an item.</li>
+							</ul>
+						</small>
+					</section>
+					<section data-background-color="#caf9e6">
+						<small>
+							test data:
+						</small>
+						<small><pre><code class="javascript" data-trim >
+const userStore = new DataStore< User>();
 
-					<section>
-						<h4>extending generic classes:</h4>
-						<img src="res/generics/" />
+userStore.addItem({ id: 1, name: 'John Doe', email: 'john@example.com' });
+userStore.addItem({ id: 2, name: 'Jane Doe', email: 'jane@example.com' });
+
+console.log(userStore.getAllItems());
+
+userStore.updateItem(1, { id: 1, name: 'John Doe Updated', email: 'johnupdated@example.com' });
+console.log(userStore.findItem(1));
+
+userStore.removeItem(2);
+console.log(userStore.getAllItems());
+
+userStore.clearStore();
+console.log(userStore.getAllItems());
+
+						</code></pre></small>
 					</section>
 
-					<section>
-						<h4>the keyof operator:</h4>
-						<img src="res/generics/" />
-					</section>
 
-					<section>
-						<h4>type mappings:</h4>
-						<img src="res/generics/" />
-					</section>
+<!--					<section>-->
+<!--						<h4>extending generic classes:</h4>-->
+<!--						<img src="res/generics/" />-->
+<!--					</section>-->
 
-					<section>
-						<h4>:</h4>
-						<img src="res/generics/" />
-					</section>
+<!--					<section>-->
+<!--						<h4>the keyof operator:</h4>-->
+<!--						<img src="res/generics/" />-->
+<!--					</section>-->
 
-					<section>
-						<h4>:</h4>
-						<img src="res/generics/" />
-					</section>
+<!--					<section>-->
+<!--						<h4>type mappings:</h4>-->
+<!--						<img src="res/generics/" />-->
+<!--					</section>-->
+
+<!--					<section>-->
+<!--						<h4>:</h4>-->
+<!--						<img src="res/generics/" />-->
+<!--					</section>-->
+
+<!--					<section>-->
+<!--						<h4>:</h4>-->
+<!--						<img src="res/generics/" />-->
+<!--					</section>-->
 				</section>
 <!--				<section>-->
 <!--					<section>-->
@@ -1933,6 +2253,10 @@ console.log(digitalBook.describe());
 						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.31.54.png" />
 					</section>
 					<section>
+						<h4>@TS-what?</h4>
+						<a target="_blank" href="https://dev.to/maafaishal/ts-expect-error-over-ts-ignore-in-typescript-5140">Use "@ts-expect-error" over "@ts-ignore"</a>
+					</section>
+					<section>
 						<h4>code works not screaming at us:</h4>
 						<img src="res/integration_with_js/Screenshot%202024-03-02%20at%2008.32.02.png" />
 					</section>
@@ -1984,11 +2308,11 @@ console.log(digitalBook.describe());
 <!--					</section>-->
 
 				</section>
-				<section>
-					<section>
-						<h4>[react with TS]</h4>
-					</section>
-				</section>
+<!--				<section>-->
+<!--					<section>-->
+<!--						<h4>[react with TS]</h4>-->
+<!--					</section>-->
+<!--				</section>-->
 				<section>
 					<section>
 						<h4>wrap-up</h4>
